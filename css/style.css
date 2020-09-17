@@ -1,3 +1,70 @@
+body{
+    background-image: url("/images/background-old-purple-paper.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.menu{
+    background-color: yellow;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+    
+}
+.row{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline;
+    float: right;
+}
+
+/*-----------------------Menu navigation------------------------*/
+nav{
+    background-color:  red;
+    margin: 0;
+    padding: 0;
+    float: right;
+    
+}
+
+nav ul{
+  
+    background-color: orange;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+nav ul li {
+    
+    background-color: blue;
+    float: right;
+}
+
+nav ul li a{
+    display: block;
+    background-color:blueviolet;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*-----------------------Header Home page-----------------------*/
+header div{
+    background-image: url("/images/castleinterior.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-flex;
+    height: 600px;
+    width: 100%;
+}
+
 
 /*-----------------------Footer------------------------*/
 footer{
