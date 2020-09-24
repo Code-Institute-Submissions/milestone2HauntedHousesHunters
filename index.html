@@ -11,35 +11,48 @@
 <body>
     
 <!----------Navigation menus-------->
-        <div class="row">
-            <nav>
-                <ul>
-                    <li class="col-xs-6 col-sm-2">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="col-xs-6 col-sm-2"> 
-                        <a href="houses.html">Houses</a>
-                    </li>
-                    <li class="col-xs-6 col-sm-2">
-                        <a href="locations.html">Locations</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+    <div class="row col-lg-12">
+        <nav class="navbar navbar-expand-lg navbar-light col-12" id="navbar">
+	<!-- Logo (placeholder for now) -->
+	    <a class="navbar-brand col-1" href="index.html">
+		    <img class="img-fluid" src="#" alt="Haunted Houses Hunters" title="Logo"/>
+	    </a>
 
+    <!-- Toggler Icon on Mobile -->
+	<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+			aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+    -->
+    <!-- Navigation Links -->
+            <ul class="navbar-nav d-flex ml-auto justify-content-center">
+                <li class="nav-item m-auto col-xs-6 col-sm-2">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item m-auto col-xs-6 col-sm-2">
+                    <a class="nav-link" href="houses.html">Houses</a>
+                </li>
+                <li class="nav-item m-auto col-xs-6 col-sm-2">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+                <li class="nav-item m-auto col-xs-6 col-sm-2">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul> 
+        </nav>
+    </div>
         
 <!----------Navigation on small screens-------->
 
 
 <!----------Hero image------------------>
         <header>
-            <div>
-                <p> Browse through our selection of the most curious and scary haunted houses stories 
+            <div class="hero-text">
+                <p class="col align-self-center"> Browse through our selection of the most curious and scary haunted houses stories 
                 and immerse yourself in the experience by visiting their locations!
                 </p>
+                <button type="button" class="btn btn-dark">See Houses</button>
+                <button type="button" class="btn btn-dark">See Locations</button>
             </div>
         </header>
 

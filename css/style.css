@@ -2,61 +2,56 @@ body{
     background-image: url("/images/background-old-purple-paper.jpg") ;
     background-size: cover;
     background-repeat: no-repeat;
-
-}
-
-.menu{
-    background-color: yellow;
-    margin: 0;
-    padding: 0;
+    z-index: 0;
     width: 100%;
-    
-    
+
 }
+
 .row{
     margin: 0;
     padding: 0;
-    width: 100%;
-    display: inline;
-    float: right;
 }
+
 
 /*-----------------------Menu navigation------------------------*/
 nav{
-    background-color:  red;
     margin: 0;
     padding: 0;
-    float: right;
+    border: 2px solid white;
     
 }
-
+nav ul li {
+    border: 1px solid red;
+    
+}
 nav ul{
-  
-    background-color: orange;
+    background-color: pink;
+    
+}
+/*
+nav ul{
+    background-color: black;
     list-style: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     width: 100%;
-    
-}
-
-nav ul li {
-    
-    background-color: blue;
     float: right;
 }
 
 nav ul li a{
     display: block;
     background-color:blueviolet;
-    padding: 12px 20px;
+    padding-left: 5px;
     text-decoration: none;
     text-align: center;
+    margin-left: 25%;
+    border: solid 2px blue;
+    float: left;
+    width: 100%;
 }
-
+*/
 /*-----------------------Header Home page-----------------------*/
-header div{
+header{
     background-image: url("/images/castleinterior.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,7 +59,27 @@ header div{
     height: 600px;
     width: 100%;
 }
+.hero-text {
+    background-color: rgb(181, 97, 143, 0.4);
+    
+    width: 80%;
+    padding: 20px;
+    margin: 0 20% 0 20%;
+    border: solid;
+    border-color:#60342e;
+    
+}
+.hero-text p{
+    font-weight: 400;
+    margin: 30% 0 30% 0;
+    font-size: 20px;
+    color: #8b2f62;
+}
 
+button{
+    margin-left: 20%;
+    background-color:  rgb(181, 97, 143, 0.4);
+}
 
 /*-----------------------Footer------------------------*/
 footer{
