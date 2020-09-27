@@ -4,45 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haunted Houses Hunters</title>
+    <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
+    <!--Load jasmine framework testing-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/boot.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.css"/>
+    
+    <!--fonts-->
     <script src="https://kit.fontawesome.com/e98e89c2c2.js" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
     <!----------Navigation menus-------->
-        <div class="row">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="houses.html">Houses</a>
-                    </li>
-                    <li>
-                        <a href="locations.html">Locations</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <!----------Navigation menus-------->
+    <div class="row col-lg-12">
+        <nav class="navbar navbar-expand-lg navbar-light col-12" id="navbar">
+	<!-- Logo (placeholder for now) -->
+	    <a class="navbar-brand col-1" href="index.html">
+		    <img class="img-fluid" src="#" alt="Haunted Houses Hunters" title="Logo"/>
+	    </a>
+
+    <!-- Toggler Icon on Mobile -->
+	<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+			aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+    -->
+    <!-- Navigation Links -->
+            <ul class="navbar-nav d-flex ml-auto justify-content-center">
+                <li class="nav-item m-auto col-xs-6 col-sm-2">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item m-auto col-xs-6 col-sm-2">
+                    <a class="nav-link" href="houses.html">Houses</a>
+                </li>
+                <li class="nav-item m-auto col-xs-6 col-sm-2">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+                <li class="nav-item m-auto col-xs-6 col-sm-2">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul> 
+        </nav>
+    </div>
     <!----------Navigation on small screens-------->
 
 
     <!----------Hero image------------------>
         <header>
-            <div>
+            <div class="hero-text">
+                <p class="col align-self-center"> Browse through our selection of the most curious and scary haunted houses stories 
+                and immerse yourself in the experience by visiting their locations!
+                </p>
+                <button type="button" class="btn btn-dark">Europe</button>
+                <button type="button" class="btn btn-dark">Americas</button>
             </div>
         </header>
     <!----------Section Europe ----------------->
         <section>
+            <h1>Europe</h1>
+            <div class="row"> 
+                <div class="card house1 col-md-4 col-xs-12">
+                    <img class="house_image" src="images/house1.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE1</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house1_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+                <div class="card house2 col-md-4 col-xs-12">
+                    <img class="house_image" src="house2.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE2</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house2_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+                <div class="card house3 col-md-4 col-xs-12">
+                    <img class="house_image" src="house3.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE3</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house3_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">     
+                <div class="card house1 col-md-4 col-xs-12">
+                    <img class="house_image" src="house4.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE4</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house4_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+                <div class="card house2 col-md-4 col-xs-12">
+                    <img class="house_image" src="house5.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE5</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house5_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+                <div class="card house3 col-md-4 col-xs-12">
+                    <img class="house_image" src="house6.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE6</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house6_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+            </div>
         </section>
     
     <!----------Section Americas ----------------->
         <section>
+            <h1>Americas</h1>
+            <div class="row"> 
+                <div class="card house1 col-md-4 col-xs-12">
+                    <img class="house_image" src="house7.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE7</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house7_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+                <div class="card house2 col-md-4 col-xs-12">
+                    <img class="house_image" src="house8.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE8</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house8_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+                <div class="card house3 col-md-4 col-xs-12">
+                    <img class="house_image" src="house9.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE9</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house9_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">     
+                <div class="card house1 col-md-4 col-xs-12">
+                    <img class="house_image" src="house10.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE10</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house10_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+                <div class="card house2 col-md-4 col-xs-12">
+                    <img class="house_image" src="house11.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE11</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house11_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+                <div class="card house3 col-md-4 col-xs-12">
+                    <img class="house_image" src="house12.jpg" alt="house">
+                    <div class="house_bottom">
+                        <h2 class="house_head">HOUSE12</h2>
+                        <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
+                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                            Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
+                            Donec vel erat ac est lacinia placerat at in lectus. </p>
+                        <p id="house12_read" class="moretext">Read more</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 <!----------Footer------------------>
@@ -57,7 +239,14 @@
         </div>
     </footer>
 
-<script type="text/javascript" src="main.js"></script>
+<!--Load the main javascript file
+change this route when testing to: <script type="text/javascript" src="jasmine-testing/scripts/maincopy.js"></script> -->
+<script type="text/javascript" src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+<!-- Load tests-->
+<script type="text/javascript" src="jasmine-testing/specs/mainSpec.js"></script>
+
 <!-- These 3 are for bootstrap javascript and jquery functionalities I might not need them-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -80,7 +80,67 @@ button{
     margin-left: 20%;
     background-color:  rgb(181, 97, 143, 0.4);
 }
+/*-----------------------Houses page-------------------*/
+.card {
+	flex:1; 
+	display: flex;	
+	flex-flow:column;	
+	min-width: 240px; 
+	margin: 10px;
+	padding: 20px;
+	background-color: #c8accf;
+}
 
+.house_image {
+	width: 100%;
+}
+
+#house1_read {
+	width: 100%;
+	text-align: left;
+	text-decoration: none;
+	color: rgba(224, 93, 132, 0.85);
+}
+
+.complete{
+    display:none;
+}
+
+.moretext{
+    color:navy;
+    font-size:13px;
+    padding:3px;
+    cursor:pointer;
+}
+#house2_read {
+	width: 100%;
+	text-align: left;
+	text-decoration: none;
+	color: rgba(224, 93, 132, 0.85);
+}
+#house3_read {
+	width: 100%;
+	text-align: left;
+	text-decoration: none;
+	color: rgba(224, 93, 132, 0.85);
+}
+
+.house_bottom {
+	display: flex;
+	flex-flow:column;
+}
+
+.house_head {
+	flex:0;
+}
+
+.house_para {
+	flex:1 0 auto;
+}
+
+.highlight_house {
+	background-color: #be1666;
+}
 /*-----------------------Footer------------------------*/
 footer{
     border-style: solid;
