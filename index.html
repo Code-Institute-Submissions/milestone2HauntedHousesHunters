@@ -67,8 +67,52 @@
         </header>
 
 <!----------Section for slider----------------->
-        <section>
-        </section>
+        <div id="wrapper">
+			<div class="paragraph">
+				<h1>See our houses below</h1>
+			</div>
+			<div class="slider">
+				<input checked="" type="radio" name="slider" id="slide-house1" selected="false">
+				<input type="radio" name="slider" id="slide-house2" selected="false">
+				<input type="radio" name="slider" id="slide-house3" selected="false">
+				<input type="radio" name="slider" id="slide-house4" selected="false">
+
+                <div class="slides">
+                    <div class="slide">
+                        <h2>House 1</h2>
+                        <img src="/images/house1.jpg">
+                        <label class="next" for="slide-house1">
+                            <img src="images/arrowright.png">
+                        </label>
+                        <div class="description">House1</div>
+                    </div>
+                    <div class="slide">
+                        <h2>House 2</h2>
+                        <label class="prev" for="slide-house2"></label>
+                            <img src="images/house2.jpg">
+                        <label class="next" for="slide-house2"></label>
+                        <div class="description">House2</div>
+                    </div>
+                    <div class="slide">
+                        <h2>House 3</h2>
+                        <label class="prev" for="slide-house3"></label>
+                            <img src="#">
+                        <div class="description">House3</div>
+                    </div>
+                    <div class="slide">
+                        <h2>House 4</h2>
+                        <label class="prev" for="slide-house4"></label>
+                            <img src="#">
+                        <div class="description">House4</div>
+                    </div>
+                </div>
+				<div class="nav">
+					<label class="bottom" for="slide-house1"></label>
+					<label class="bottom" for="slide-house2"></label>
+					<label class="bottom" for="slide-house3"></label>
+				</div>
+		    </div>
+	    </div>	
     
 <!----------Footer------------------>
     <footer class="row col-12">

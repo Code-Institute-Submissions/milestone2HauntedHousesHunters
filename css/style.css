@@ -4,6 +4,7 @@ body{
     background-repeat: no-repeat;
     z-index: 0;
     width: 100%;
+    color: #474544;
 
 }
 
@@ -80,6 +81,138 @@ button{
     margin-left: 20%;
     background-color:  rgb(181, 97, 143, 0.4);
 }
+/*-----------------------Slider Home page-------------------*/
+#wrapper {
+	margin: 0 auto;
+	width: 600px;
+  }
+  
+  h1 {
+	margin: 0;
+	font-size: 14px;
+  }
+  
+  .slider {
+	position: relative;
+	overflow: hidden;
+	height: 420px;
+	width: 600px;
+  }
+
+  .slides {
+	transition: all 500ms cubic-bezier(0.5, 0.0, 0.2, 1.0);
+	width: 1000%;
+  }
+
+  .slide {
+	position: relative;
+	float: left;
+	height: 400px;
+  }
+
+  .slide .description {
+	position: absolute;
+	top: calc(100% - 40px);
+	z-index: 3;
+	opacity: 0;
+	height: 30px;
+	width: 600px;
+	text-align: center;
+	padding: 5px;
+	background-color: black;
+	color: white;
+	transition: all 500ms ease;
+  }
+  .slide .description:hover {
+	opacity: 0.7;
+	transition: all 500ms ease;
+  }
+  input[type="radio"] {
+	display: none;
+  }
+  .prev {
+	background-image: url(/icons/arrowleft.jpg);
+	background-repeat: no-repeat;
+	position: absolute;
+	cursor: pointer;
+	z-index: 2;
+	margin-top: 150px;
+	left: 0;
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	opacity: 0.3;
+	transition: all 500ms ease;
+  }
+  .prev:hover {
+	opacity: 0.5;
+	transition: all 500ms ease;
+  }
+  .next {
+	background-image: url(/icons/arrowright.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	cursor: pointer;
+	z-index: 2;
+	margin-top: 150px;
+	right: 0;
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	opacity: 0.3;
+	transition: all 500ms ease;
+  }
+  .next:hover {
+	opacity: 0.5;
+	transition: all 500ms ease;
+  }
+  .slider .nav {
+	position: absolute;
+	text-align: center;
+	z-index: 3;
+	top: 400px;
+	width: 600px;
+  }
+ 
+  label.bottom {
+	background: #cccccc;
+	transition: all 500ms cubic-bezier(0.5, 0.0, 0.2, 1.0);
+	display: inline-block;
+	cursor: pointer;
+	width: 30px;
+	height: 10px;
+	border-radius: 5px;
+  }
+
+  #slide-house1:checked ~ .nav > label[for="slide-house1"],
+  #slide-house2:checked ~ .nav > label[for="slide-house2"],
+  #slide-house3:checked ~ .nav > label[for="slide-house3"],
+  #slide-house4:checked ~ .nav > label[for="slide-house4"],
+  #slide-house5:checked ~ .nav > label[for="slide-house5"],
+  #slide-house6:checked ~ .nav > label[for="slide-house6"],
+  #slide-house7:checked ~ .nav > label[for="slide-house7"],
+  #slide-house8:checked ~ .nav > label[for="slide-house8"],
+  #slide-house9:checked ~ .nav > label[for="slide-house9"],
+  #slide-house10:checked ~ .nav > label[for="slide-house10"],
+  #slide-house11:checked ~ .nav > label[for="slide-house11"],
+  #slide-house12:checked ~ .nav > label[for="slide-house12"]{
+	background: #333333;
+	transition: all 500ms cubic-bezier(0.5, 0.0, 0.2, 1.0);
+  }
+
+  #slide-house1:checked ~ .slides { margin-left: 0; }
+  #slide-house2:checked ~ .slides { margin-left: -100%; }
+  #slide-house3:checked ~ .slides { margin-left: -200%; }
+  #slide-house4:checked ~ .slides { margin-left: -300%; }
+  #slide-house5:checked ~ .slides { margin-left: -400%; }
+  #slide-house6:checked ~ .slides { margin-left: -500%; }
+  #slide-house7:checked ~ .slides { margin-left: -600%; }
+  #slide-house8:checked ~ .slides { margin-left: -700%; }
+  #slide-house9:checked ~ .slides { margin-left: -800%; }
+  #slide-house10:checked ~ .slides { margin-left: -900%; }
+  #slide-house11:checked ~ .slides { margin-left: -1000%; }
+  #slide-house12:checked ~ .slides { margin-left: -1100%; }
+ 
 /*-----------------------Houses page-------------------*/
 .card {
 	flex:1; 
@@ -141,6 +274,100 @@ button{
 .highlight_house {
 	background-color: #be1666;
 }
+
+/*-----------------------Contact page------------------------*/
+
+.form{
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    background-color: #F2F3EB;
+    border: solid 3px #474544;
+    border-radius: 1px;
+    font-family: monospace;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+.form-title{
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    padding-bottom: 12px;
+    color: #474544;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    background: #af43ca;
+    background: -moz-linear-gradient(left,#f4524d  0%,#af43ca 100%) !important;
+}
+
+.underline {
+  border-bottom: solid 2px #474544;
+  margin: 9px auto;
+  width: 80px;
+}
+
+.contact-image img{
+    height: 80px;
+    width: 80px;
+    opacity: 0.8;
+    margin: 0 auto;
+    display: block;
+}
+.contact-form .form-field {
+  position: relative;
+  margin: 24px 0;
+  color:#474544;
+}
+
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 24px;
+  border-width: 0 0 2px 0;
+  border-color: #5543ca;
+  line-height: 18px;
+  
+}
+
+.form-house-selection {
+    
+}
+.house-selection{
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #5543ca;
+    padding-bottom: 13px;
+    margin-bottom: 27px;
+    vertical-align: auto;
+    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.form-message{
+    height: 150px;
+    width: 100%;
+    padding-bottom: 10px;
+    margin: 0;
+    border-width: 2px;
+    border-color: #474544;
+}
+
+.submit-btn{
+    border: solid 2px #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+}
+.submit-btn:hover{
+    background: #474544;
+    color: #F2F3EB;
+}
+
+
+
 /*-----------------------Footer------------------------*/
 footer{
     border-style: solid;
