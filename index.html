@@ -20,13 +20,13 @@
 </head>
 <body>
     
-<!----------Navigation menus-------->
+<!----------Navigation menus-------------------->
     <div class="row col-lg-12">
-        <nav class="navbar navbar-expand-lg navbar-light col-12" id="navbar">
-	<!-- Logo (placeholder for now) -->
-	    <a class="navbar-brand col-1" href="index.html">
-		    <img class="img-fluid" src="#" alt="Haunted Houses Hunters" title="Logo"/>
-	    </a>
+        <nav class="navbar navbar-expand-lg col-12" id="navbar">
+	<!-- Logo (placeholder for now) --> 
+	        <div class="logo navbar-brand col-2">
+                <a href="index.html" title="Haunted Houses Hunters"></a>
+            </div>
 
     <!-- Toggler Icon on Mobile -->
 	<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -61,12 +61,13 @@
                 <p class="col align-self-center"> Browse through our selection of the most curious and scary haunted houses stories 
                 and immerse yourself in the experience by visiting their locations!
                 </p>
-                <button type="button" class="btn btn-dark">See Houses</button>
-                <button type="button" class="btn btn-dark">See Locations</button>
+                <button type="button" class="btn btn-dark"><a href="houses.html"> See Houses</a></button>
+                <button type="button" class="btn btn-dark"><a href="locations.html"> See Locations</a></button>
             </div>
         </header>
 
 <!----------Section for slider----------------->
+        <br>
         <div id="wrapper">
 			<div class="paragraph">
 				<h1>See our houses below</h1>
@@ -76,43 +77,97 @@
 				<input type="radio" name="slider" id="slide-house2" selected="false">
 				<input type="radio" name="slider" id="slide-house3" selected="false">
 				<input type="radio" name="slider" id="slide-house4" selected="false">
+                <input type="radio" name="slider" id="slide-house5" selected="false">
+                <input type="radio" name="slider" id="slide-house6" selected="false">
+                <input type="radio" name="slider" id="slide-house7" selected="false">
+                <input type="radio" name="slider" id="slide-house8" selected="false">
+                <input type="radio" name="slider" id="slide-house9" selected="false">
+                <input type="radio" name="slider" id="slide-house10" selected="false">
+                <input type="radio" name="slider" id="slide-house11" selected="false">
+                <input type="radio" name="slider" id="slide-house12" selected="false">
 
                 <div class="slides">
                     <div class="slide">
-                        <h2>House 1</h2>
-                        <img src="/images/house1.jpg">
+                        <img src="/images/house1.png">
                         <label class="next" for="slide-house1">
                             <img src="images/arrowright.png">
                         </label>
-                        <div class="description">House1</div>
+                        <div class="description">House1 Garden Reach (UK)</div>
                     </div>
                     <div class="slide">
-                        <h2>House 2</h2>
                         <label class="prev" for="slide-house2"></label>
                             <img src="images/house2.jpg">
                         <label class="next" for="slide-house2"></label>
-                        <div class="description">House2</div>
+                        <div class="description">House2 Boleskine House (UK)</div>
                     </div>
                     <div class="slide">
-                        <h2>House 3</h2>
                         <label class="prev" for="slide-house3"></label>
-                            <img src="#">
-                        <div class="description">House3</div>
+                            <img src="images/house3.jpg">
+                        <div class="description">House3 Palazzo Dario (Italy) </div>
                     </div>
                     <div class="slide">
-                        <h2>House 4</h2>
                         <label class="prev" for="slide-house4"></label>
-                            <img src="#">
-                        <div class="description">House4</div>
+                            <img src="images/house4.jpg">
+                        <div class="description">House4 Palacio de Linares (Spain) </div>
+                    </div>
+                    <div class="slide">
+                        <label class="prev" for="slide-house5"></label>
+                            <img src="images/house5.jpg">
+                        <div class="description">House5 Frankenstein Castle (Germany) </div>
+                    </div>
+                    <div class="slide">
+                        <label class="prev" for="slide-house6"></label>
+                            <img src="images/house6.jpg">
+                        <div class="description">House6 Catacombs of Paris (France) </div>
+                    </div>
+                    <div class="slide">
+                        <label class="prev" for="slide-house7"></label>
+                            <img src="images/house7.jpg">
+                        <div class="description">House7 Leap Castle (Ireland) </div>
+                    </div>
+                    <div class="slide">
+                        <label class="prev" for="slide-house8"></label>
+                            <img src="images/house8.jpeg">
+                        <div class="description">House8 Amityville House (USA) </div>
+                    </div>
+                    <div class="slide">
+                        <label class="prev" for="slide-house9"></label>
+                            <img src="images/house9.jpg">
+                        <div class="description">House9 LaLaurie Mansion (USA) </div>
+                    </div>
+                    <div class="slide">
+                        <label class="prev" for="slide-house10"></label>
+                            <img src="images/house10.jpg">
+                        <div class="description">House10 Isla de las Muñecas (Mexico) </div>
+                    </div>
+                    <div class="slide">
+                        <label class="prev" for="slide-house11"></label>
+                            <img src="images/house11.jpg">
+                        <div class="description">House11 Joelma Building (Brazil)</div>
+                    </div>
+                    <div class="slide">
+                        <label class="prev" for="slide-house12"></label>
+                            <img src="images/house12.png">
+                        <div class="description">House12 El Salto Hotel (Colombia)</div>
                     </div>
                 </div>
 				<div class="nav">
 					<label class="bottom" for="slide-house1"></label>
 					<label class="bottom" for="slide-house2"></label>
 					<label class="bottom" for="slide-house3"></label>
+                    <label class="bottom" for="slide-house4"></label>
+                    <label class="bottom" for="slide-house5"></label>
+                    <label class="bottom" for="slide-house6"></label>
+                    <label class="bottom" for="slide-house7"></label>
+                    <label class="bottom" for="slide-house8"></label>
+                    <label class="bottom" for="slide-house9"></label>
+                    <label class="bottom" for="slide-house10"></label>
+                    <label class="bottom" for="slide-house11"></label>
+                    <label class="bottom" for="slide-house12"></label>
 				</div>
 		    </div>
 	    </div>	
+        <br>
     
 <!----------Footer------------------>
     <footer class="row col-12">
