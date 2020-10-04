@@ -4,51 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haunted Houses Hunters</title>
+    <!------Bootstrap------------------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!--Load jasmine framework testing-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/boot.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.css"/>
+    
+    <!-----------fonts & style---------->
     <script src="https://kit.fontawesome.com/e98e89c2c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
 
 <!----------Navigation menus-------------------->
-    <div class="row col-lg-12">
-        <nav class="navbar navbar-expand-lg col-12" id="navbar">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg col-lg-12" id="navbar">
 	<!-- Logo (placeholder for now) --> 
-	        <div class="logo navbar-brand col-2">
+	        <div class="logo navbar-brand col-md-4">
                 <a href="index.html" title="Haunted Houses Hunters"></a>
             </div>
 
-    <!-- Toggler Icon on Mobile -->
-	<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-			aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-    -->
-    <!-- Navigation Links -->
-            <ul class="navbar-nav d-flex ml-auto justify-content-center">
-                <li class="nav-item m-auto col-xs-6 col-sm-2">
-                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item m-auto col-xs-6 col-sm-2">
-                    <a class="nav-link" href="houses.html">Houses</a>
-                </li>
-                <li class="nav-item m-auto col-xs-6 col-sm-2">
-                    <a class="nav-link" href="locations.html">Locations</a>
-                </li>
-                <li class="nav-item m-auto col-xs-6 col-sm-2">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul> 
-        </nav>
-    </div>
+            <!-- Toggler Icon on Mobile -->
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <!-- Navigation Links -->
+                <ul class="navbar-nav d-flex ml-auto justify-content-center">
+                    <li class="nav-item m-auto col-xs-6 col-sm-2">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item m-auto col-xs-6 col-sm-2">
+                        <a class="nav-link" href="houses.html">Houses</a>
+                    </li>
+                    <li class="nav-item m-auto col-xs-6 col-sm-2">
+                        <a class="nav-link" href="locations.html">Locations</a>
+                    </li>
+                    <li class="nav-item m-auto col-xs-6 col-sm-2">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul> 
+            </nav>
+        </div>
 <!----------Navigation on small screens-------->
 
 
 <!----------Google Map------------------>
-        <header>
-            <div>
+  
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                <h1>See the houses in the map</h1>
+                <div id="map">
+                </div>
             </div>
-        </header>
+        </div>
+    
 
 <!----------Section for Infor displayed when click on a house on the map----------------->
         <section>
@@ -67,7 +80,22 @@
         </div>
     </footer>
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!-- <script> var APIKey = AIzaSyD05d-BFX4_6fPTRJBR6itqauszoOnCQ3M</script> -->
+
+<!-- Google Cloud documentation site for maps API-->
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js">
+    </script>
+    <!-- Replaced the following script src with the ID-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD05d-BFX4_6fPTRJBR6itqauszoOnCQ3M&callback=initMap">
+    </script>
+
+    
+<!-- Load tests-->
+<script type="text/javascript" src="jasmine-testing/specs/mainSpec.js"></script>    
+
+
 <!-- These 3 are for bootstrap javascript and jquery functionalities I might not need them-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -5,12 +5,12 @@ body{
     z-index: 0;
     width: 100%;
     color: #474544;
-
 }
 
 .row{
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 
@@ -24,76 +24,72 @@ nav{
 
 .logo{
     background: url("/images/logo.png") center no-repeat; 
-    height: 90px;
+    height: 80px;
     background-size: contain;
-  
 }
 
-nav a img{
-    height: 180px;
-    width: 180px;
+@media screen and (max-width: 320px){
+    .logo{
+        margin: auto;
+    }
+}
+.navbar-nav{
+    padding-left: 25px;
 }
 
-nav ul li {
-    border: 1px solid red;
-}
-
-nav ul{
-    background-color: #231f20;
-
-}
-
-ul li a{
+.nav-item{
     color: #fbf8f2;
     font-family: monospace;
     font-size: 14px;
     font-weight: lighter;
+    
 }
 
-ul li a:hover{
+.nav-item:hover{
     color: #c0b43c;
 }
 
-/*
-nav ul{
-    background-color: black;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    float: right;
+.navbar-toggler{
+    border: solid 1px #c0b43c;
+    margin: 10px auto;
 }
 
-nav ul li a{
-    display: block;
-    background-color:blueviolet;
-    padding-left: 5px;
-    text-decoration: none;
-    text-align: center;
-    margin-left: 25%;
-    border: solid 2px blue;
-    float: left;
-    width: 100%;
+@media screen and (max-width: 320px){
+    .row-nav{
+        background-size: cover;
+        width: 320px;
+    }
 }
-*/
+
 /*-----------------------Header Home page-----------------------*/
-header{
-    background-image: url("/images/castleinterior.jpg");
+.header{
+    background-image: url("/images/castleinterior.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: auto;
-    width: auto;
+    border: 1px solid yellow;
+    height: 820px;
+    width: 100%;
+    
 }
+
+@media screen and (max-width: 320px){
+    .header{
+        background-size: cover;
+        height: 300px;
+        width: 320px;
+    }
+}
+
 .hero-text {
     background-color: rgb(192, 180, 60, 0.5);
     background-size: contain;
-    display: inline-block;
+    display: block;
     padding: 20px;
     margin: 20%;
     border: solid;
-    border-color:#8d0134;
-    
+    border-color:#8d0134;   
 }
+
 .hero-text p{
     font-weight: 600;
     width: 100%;
@@ -104,6 +100,18 @@ header{
     font-family: monospace;
 }
 
+@media screen and (max-width: 750px){
+    .hero-text p{
+        height: 600px;
+        width: 300px;
+      
+    }
+}
+@media screen and (max-width: 320px){
+    .hero-text p{
+        display: none;
+    }
+}
 .btn-dark{
     margin-left: 20%;
     background-color: #231f20;
@@ -118,8 +126,16 @@ header{
 .btn-dark a:hover{
     color: #c0b43c;
     text-decoration: none;
-    
 }
+
+@media screen and (max-width: 320px){
+    .btn-dark{
+        margin: auto;
+        margin-top: 10px;
+        display: block;
+        padding-top: 0;
+    }
+} 
 /*-----------------------Slider Home page-------------------*/
 #wrapper {
 	margin: 0 auto;
@@ -172,42 +188,7 @@ header{
   input[type="radio"] {
 	display: none;
   }
-  .prev {
-	background-image: url(/icons/arrowleft.jpg);
-	background-repeat: no-repeat;
-	position: absolute;
-	cursor: pointer;
-	z-index: 2;
-	margin-top: 150px;
-	left: 0;
-	height: 50px;
-	width: 50px;
-	background-color: #c0b43c;
-	opacity: 0.3;
-	transition: all 500ms ease;
-  }
-  .prev:hover {
-	opacity: 0.5;
-	transition: all 500ms ease;
-  }
-  .next {
-	background-image: url(/icons/arrowright.png);
-	background-repeat: no-repeat;
-	position: absolute;
-	cursor: pointer;
-	z-index: 2;
-	margin-top: 150px;
-	right: 0;
-	height: 50px;
-	width: 50px;
-	background-color: #c0b43c;
-	opacity: 0.3;
-	transition: all 500ms ease;
-  }
-  .next:hover {
-	opacity: 0.5;
-	transition: all 500ms ease;
-  }
+  
   .slider .nav {
 	position: absolute;
 	text-align: center;
@@ -222,8 +203,8 @@ header{
 	display: inline-block;
 	cursor: pointer;
 	width: 30px;
-	height: 10px;
-	border: solid 2px #8d0134;
+	height: 20px;
+	border: solid 2px #231f20;
   }
 
   #slide-house1:checked ~ .nav > label[for="slide-house1"],
@@ -238,7 +219,7 @@ header{
   #slide-house10:checked ~ .nav > label[for="slide-house10"],
   #slide-house11:checked ~ .nav > label[for="slide-house11"],
   #slide-house12:checked ~ .nav > label[for="slide-house12"]{
-	background: #333333;
+	background: #231f20;
 	transition: all 500ms cubic-bezier(0.5, 0.0, 0.2, 1.0);
   }
 
@@ -255,6 +236,20 @@ header{
   #slide-house11:checked ~ .slides { margin-left: -1000%; }
   #slide-house12:checked ~ .slides { margin-left: -1100%; }
  
+
+ @media screen and (max-width: 750px){
+    .slider{
+        height: 600px;
+      
+    }
+}
+@media screen and (max-width: 320px){
+    .slider{
+        height: 500px;
+      
+    }
+}
+
 /*-----------------------Houses page-------------------*/
 .card {
 	flex:1; 
@@ -270,40 +265,25 @@ header{
 	width: 100%;
 }
 
-#house1_read {
+.moretext {
 	width: 100%;
 	text-align: left;
 	text-decoration: none;
 	color: rgba(224, 93, 132, 0.85);
-}
-
-.complete{
-    display:none;
-}
-
-.moretext{
-    color:navy;
-    font-size:13px;
-    padding:3px;
     cursor:pointer;
 }
-#house2_read {
-	width: 100%;
-	text-align: left;
-	text-decoration: none;
-	color: rgba(224, 93, 132, 0.85);
-}
-#house3_read {
-	width: 100%;
-	text-align: left;
-	text-decoration: none;
-	color: rgba(224, 93, 132, 0.85);
+
+#complete1{
+    display: none;
+    
 }
 
+/*
 .house_bottom {
 	display: flex;
 	flex-flow:column;
 }
+
 
 .house_head {
 	flex:0;
@@ -313,10 +293,7 @@ header{
 	flex:1 0 auto;
 }
 
-.highlight_house {
-	background-color: #be1666;
-}
-
+*/
 /*-----------------------Contact page------------------------*/
 
 .form{
@@ -408,7 +385,14 @@ header{
     color: #F2F3EB;
 }
 
+/*-----------------------Locations page------------------------*/
 
+#map {
+    min-height: 500px;
+    min-width: 500px;
+    border: solid 1px #231f20;
+    display: block;
+    }
 
 /*-----------------------Footer------------------------*/
 footer{
@@ -429,4 +413,15 @@ footer p{
 }
 footer ul li{
     list-style: none;
+}
+
+ul li a{
+    color: #fbf8f2;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+ul li a:hover{
+    color: #c0b43c;
 }

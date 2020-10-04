@@ -4,108 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haunted Houses Hunters</title>
-    <!--Bootstrap-->
+    <!------Bootstrap------>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
    
-    <!--Load jasmine framework testing-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine-html.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/boot.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.css"/>
-    
-    <!--fonts-->
+    <!------fonts & style------>
     <script src="https://kit.fontawesome.com/e98e89c2c2.js" crossorigin="anonymous"></script>
-    
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    
+    <!----- EmailJS------->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_y7IrePDzdwP0qDKKomJtm");
+        })();
+    </script>
+
 </head>
 <body>
-    <div class="container">
+    
 <!----------Navigation menus-------->
-        <div class="row col-lg-12">
-        <nav class="navbar navbar-expand-lg col-12" id="navbar">
-	<!-- Logo (placeholder for now) --> 
-	        <div class="logo navbar-brand col-2">
-                <a href="index.html" title="Haunted Houses Hunters"></a>
+    <div class="row">
+        <nav class="navbar col-lg-12 navbar-expand-lg" id="navbar">
+            <a class="logo navbar-brand col-md-2 offset-md-2" src="images/logo.png" href="index.html"></a>
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-auto justify-content-center" id="navbarTogglerDemo02">
+                <div class="navbar-nav">
+                    <a class="nav-item m-auto nav-link" href="index.html">Home</a>
+                    <a class="nav-item m-auto nav-link" href="houses.html">Houses</a>
+                    <a class="nav-item m-auto nav-link" href="locations.html">Locations</a>
+                    <a class="nav-item m-auto nav-link active" href="contact.html">Contact</a>
+                </div>
             </div>
-
-            <!-- Toggler Icon on Mobile -->
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button> -->
-            <!-- Navigation Links -->
-                <ul class="navbar-nav d-flex ml-auto justify-content-center">
-                    <li class="nav-item m-auto col-xs-6 col-sm-2">
-                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item m-auto col-xs-6 col-sm-2">
-                        <a class="nav-link" href="houses.html">Houses</a>
-                    </li>
-                    <li class="nav-item m-auto col-xs-6 col-sm-2">
-                        <a class="nav-link" href="locations.html">Locations</a>
-                    </li>
-                    <li class="nav-item m-auto col-xs-6 col-sm-2">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul> 
-            </nav>
-        </div>
-<!----------Navigation on small screens-------->
-
-<!----------Navigation on big screens-------->
-
+        </nav>
+    </div>
 
 <!----------Form Section----------------->
-        <section class="form">
-            <h1 class="form-title">&bull;Do you want to know more?&bull;</h1>
-            <div class="underline"></div>
-            <div class="contact-image">
-                <img src="images/contact-icon.png" alt="contact"/>
-            </div>
+    <section class="form">
+        <h1 class="form-title">&bull;Do you want to know more?&bull;</h1>
+        <div class="underline"></div>
+        <div class="contact-image">
+            <img src="images/contact-icon.png" alt="contact"/>
+        </div>
             
-            <form method="POST" class="contact-form row">
-                <div class="form-field col-lg-6">
-                    <input id="name" class="input-text" type="text" required data-validate="Name is required">
-                    <label class="label" for="name"> Name </label>
+        <form onsubmit="return sendMail(this);" class="contact-form row">
+            <div class="form-field col-lg-6">
+                <input id="name" class="input-text" type="text" required data-validate="Name is required">
+                <label class="label" for="name"> Name </label>
+            </div>
+            <div class="form-field col-lg-6">
+                <input id="lastname" class="input-text" type="text" required>
+                <label class="label" for="Lastname"> Last Name </label>
+            </div> 
+            <div class="form-field col-lg-6">
+                <input id="email" class="input-text" type="email" required placeholder="Enter your email addess">
+                <label class="label" for="email"> E-mail </label>
+            </div> 
+            <div class="form-house-selection col-lg-6">
+                <span class="">Select house for your message</span>
+                <div>
+                    <select class="house-selection" name="house-select">
+                        <option>House1</option>
+                        <option>House2</option>
+                        <option>House3</option>
+                        <option>House4</option>
+                        <option>House5</option>
+                        <option>House6</option>
+                        <option>House7</option>
+                        <option>House8</option>
+                        <option>House9</option>
+                        <option>House10</option>
+                        <option>House11</option>
+                        <option>House12</option>
+                    </select>
                 </div>
-                <div class="form-field col-lg-6">
-                    <input id="lastname" class="input-text" type="text" required>
-                    <label class="label" for="Lastname"> Last Name </label>
-                </div> 
-                <div class="form-field col-lg-6">
-                    <input id="email" class="input-text" type="email" required placeholder="Enter your email addess">
-                    <label class="label" for="email"> E-mail </label>
-                </div> 
-                <div class="form-house-selection col-lg-6">
-                    <span class="">Select house for your message</span>
-                        <div>
-                            <select class="house-selection" name="house-select">
-                                <option>House1</option>
-                                <option>House2</option>
-                                <option>House3</option>
-                                <option>House4</option>
-                                <option>House5</option>
-                                <option>House6</option>
-                                <option>House7</option>
-                                <option>House8</option>
-                                <option>House9</option>
-                                <option>House10</option>
-                                <option>House11</option>
-                                <option>House12</option>
-                            </select>
-                        </div>
-                        <span class=""></span>
-                </div>
-                <div class="form-field col-lg-12">
-                    <textarea id="message" class="form-message" type="text" required></textarea>
-                    <label class="label" for="message">Message </label>
-                </div>
-                <div class="form-field col-lg-12">
-                    <input class="submit-btn" type="submit" value="Submit">
-                </div>
-            </form>
-        </section>
-    </div>
+                <span class=""></span>
+            </div>
+            <div class="form-field col-lg-12">
+                <textarea id="message" class="form-message" type="text" required></textarea>
+                <label class="label" for="message">Message </label>
+            </div>
+            <div class="form-field col-lg-12">
+                <input class="submit-btn" type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+    
 <!----------Footer------------------>
     <footer class="row col-12">
         <div class="col-12">

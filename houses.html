@@ -19,43 +19,27 @@
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
-    <div class="container-fluid">
+   
     <!----------Navigation menus-------->
-	    <div class="row col-lg-12">
-        <nav class="navbar navbar-expand-lg col-12" id="navbar">
-	<!-- Logo (placeholder for now) --> 
-	        <div class="logo navbar-brand col-2">
-                <a href="index.html" title="Haunted Houses Hunters"></a>
+	    <div class="row">
+        <nav class="navbar col-lg-12 navbar-expand-lg" id="navbar">
+            <a class="logo navbar-brand col-md-2 offset-md-2" src="images/logo.png" href="index.html"></a>
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-auto justify-content-center" id="navbarTogglerDemo02">
+                <div class="navbar-nav">
+                    <a class="nav-item m-auto nav-link" href="index.html">Home</a>
+                    <a class="nav-item m-auto nav-link" href="houses.html">Houses</a>
+                    <a class="nav-item m-auto nav-link" href="locations.html">Locations</a>
+                    <a class="nav-item m-auto nav-link active" href="contact.html">Contact</a>
+                </div>
             </div>
-
-    <!-- Toggler Icon on Mobile -->
-	<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-			aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-    -->
-    <!-- Navigation Links -->
-            <ul class="navbar-nav d-flex ml-auto justify-content-center">
-                <li class="nav-item m-auto col-xs-6 col-sm-2">
-                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item m-auto col-xs-6 col-sm-2">
-                    <a class="nav-link" href="houses.html">Houses</a>
-                </li>
-                <li class="nav-item m-auto col-xs-6 col-sm-2">
-                    <a class="nav-link" href="locations.html">Locations</a>
-                </li>
-                <li class="nav-item m-auto col-xs-6 col-sm-2">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul> 
         </nav>
     </div>
-    <!----------Navigation on small screens-------->
-
-
     <!----------Hero image------------------>
-        <header>
+     <div class="container-fluid">
+        <div class="header">
             <div class="hero-text">
                 <p class="col align-self-center"> Browse through our selection of the most curious and scary haunted houses stories 
                 and immerse yourself in the experience by visiting their locations!
@@ -63,18 +47,18 @@
                 <button type="button" class="btn btn-dark">Europe</button>
                 <button type="button" class="btn btn-dark">Americas</button>
             </div>
-        </header>
+        </div>
     <!----------Section Europe ----------------->
         <section>
             <h1>Europe</h1>
             <div class="row"> 
                 <div class="card house1 col-md-4 col-xs-12">
-                    <img class="house_image" src="images/house1.jpg" alt="house">
+                    <img class="house_image" src="images/house1.png" alt="house">
                     <div class="house_bottom">
                         <h2 class="house_head">HOUSE1</h2>
                         <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                             Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
-                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                        <p id="complete1">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
                             Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
                             Donec vel erat ac est lacinia placerat at in lectus. </p>
                         <p id="house1_read" class="moretext">Read more</p>
@@ -86,7 +70,7 @@
                         <h2 class="house_head">HOUSE2</h2>
                         <p class="house_para">This house is special Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                             Integer elementum eu ante a aliquam. Morbi feugiat interdum faucibus.</p> 
-                        <p class="complete">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
+                        <p class="complete2">Praesent nisi eros, tempor eu scelerisque a, egestas nec orci. 
                             Integer vel metus nec sapien dictum lacinia accumsan placerat eros. 
                             Donec vel erat ac est lacinia placerat at in lectus. </p>
                         <p id="house2_read" class="moretext">Read more</p>

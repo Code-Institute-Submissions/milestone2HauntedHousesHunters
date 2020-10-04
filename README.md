@@ -9,6 +9,7 @@ The project is made based on the second module of the course that covers HTML, C
 ## Updates 
 
 ## Testing
+This site was tested across multiple device screen sizes to ensure compatibility and responsiveness.
 We are using Jasmine to run some testing. The specs folder is where I've put the tests.
 The source code that we're going to be running the tests against is in the scripts folder,
 which contains a copy of our js folder.
