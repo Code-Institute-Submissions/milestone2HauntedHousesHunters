@@ -28,7 +28,7 @@ nav{
     background-size: contain;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 750px){
     .logo{
         margin: auto;
     }
@@ -66,28 +66,26 @@ nav{
     background-image: url("/images/castleinterior.png");
     background-size: cover;
     background-repeat: no-repeat;
-    border: 1px solid yellow;
+    border: 1px solid #8d0134; 
     height: 820px;
     width: 100%;
-    
-}
-
-@media screen and (max-width: 320px){
-    .header{
-        background-size: cover;
-        height: 300px;
-        width: 320px;
-    }
 }
 
 .hero-text {
-    background-color: rgb(192, 180, 60, 0.5);
+    background-color: rgb(192, 180, 60, 0.6);
     background-size: contain;
     display: block;
     padding: 20px;
     margin: 20%;
     border: solid;
     border-color:#8d0134;   
+}
+
+@media screen and (max-width: 500px){
+    .hero-text{
+        padding-top: 0 auto;
+        margin-top: 10px;
+    }
 }
 
 .hero-text p{
@@ -100,18 +98,31 @@ nav{
     font-family: monospace;
 }
 
-@media screen and (max-width: 750px){
-    .hero-text p{
-        height: 600px;
-        width: 300px;
-      
+.hidden{
+        display:none;
     }
-}
-@media screen and (max-width: 320px){
-    .hero-text p{
+
+@media screen and (max-width: 600px){
+    .hidden{
+        display:block;
+        width: fit-content;
+    }
+    .desktop{
         display: none;
     }
+    .header{
+        background-size: contain;
+        height:fit-content;
+        width: 100%;
+    }
 }
+
+@media screen and (max-width: 400px){
+    .hidden{
+        display:none;
+    }
+}
+
 .btn-dark{
     margin-left: 20%;
     background-color: #231f20;
@@ -128,7 +139,7 @@ nav{
     text-decoration: none;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 800px){
     .btn-dark{
         margin: auto;
         margin-top: 10px;
@@ -144,9 +155,12 @@ nav{
   }
   
   .paragraph {
-	margin: 0;
-	font-size: 14px;
+	padding: 0 20px;
+	font-size: 20px;
     color: #231f20;
+    display: block;
+    margin: 0;
+    font-family: monospace;
   }
   
   .slider {
@@ -154,6 +168,8 @@ nav{
 	overflow: hidden;
 	height: 420px;
 	width: 600px;
+    display: block;
+    margin: 0 auto;
   }
 
   .slides {
@@ -172,7 +188,7 @@ nav{
 	top: calc(100% - 80px);
 	z-index: 3;
 	opacity: 0;
-    font-size: 14px;
+    font-size: 18px;
 	height: 50px;
 	width: 600px;
 	text-align: center;
@@ -180,9 +196,12 @@ nav{
 	background-color: #c0b43c;
 	color: #8d0134;
 	transition: all 500ms ease;
+    font-family: monospace;
+    font-weight:bold;
   }
+  
   .slide .description:hover {
-	opacity: 0.7;
+	opacity: 0.8;
 	transition: all 500ms ease;
   }
   input[type="radio"] {

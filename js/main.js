@@ -230,7 +230,13 @@ function initMap(){
         }
         
     }
-    
+    -----------------------------
+    google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+      return function() {
+          infoWindow.setContent(infoWindowContent[i]);
+          infoWindow.open(map, marker);
+      };
+    })(marker, i));
 */
    /* -----------Option 4 several markers but no info ---------*/
    function initMap(){
@@ -245,24 +251,68 @@ function initMap(){
    var labels = "ABCDEFGHIJKL";
 
     var locations = [
-        {lat:51.901716 , lng: -2.077738}, /*House 1 Garden Reach House Cheltenham */
-        {lat:57.266329 , lng: -4.47479},/*House 2 Boleskine House*/
-        {lat:45.431068 , lng: 12.332400},/*House 3 Palazzo Dario Venice*/
-        {lat:40.419971, lng:-3.692151}, /*House 4 Palacio de Linares, madrid*/
-        {lat:49.793868 , lng:8.668086},/*House 5 Frankenstein castle*/ 
-        {lat:48.833988 , lng:2.332444}, /*House 6 catacombs of paris*/
-        {lat:53.028119 , lng:-7.808400}, /*House 7 */ 
-        {lat:40.6789893 , lng:-73.4170673}, /*House 8 */
-        {lat:29.962072 , lng:-90.061264}, /*House 9 */
-        {lat:19.290305 , lng:-99.096538}, /*House 10 isla de las muñecas mexico*/
-        {lat:-23.547790 , lng:-46.641106},/*House 11 Joelma Building. Sao Paulo*/
-        {lat:4.576359 , lng:-74.296661} /*House 12 El Salto Hotel. Tequendama*/
+        {location: {lat:51.901716 , lng: -2.077738}, message: 
+            '<div id="content">' +
+            '<h5>House 1. Garden Reach</h5>' +
+                '<div id="bodyContent">' +
+                    "<p><b>Location: Cheltenham, UK </b></p>" +
+                    '<div><img border="1" height="100px" width="100px" style="float:right" SRC="images/house1.png"></div>'+
+                    '<p>The building was the home of the Despard family whose daughter Rosina saw the ghost of a veiled' +
+                    "woman on several occasions in the 1880s</p>" +
+                    '<p>Attribution: Garden Reach, <a href="https://en.wikipedia.org/wiki/The_Cheltenham_Ghost">' +
+                    "Wikipedia</a> </p>" +
+                "</div>" +
+            "</div>"},
+         
+        {location: {lat:57.266329 , lng: -4.47479}, message: '<div id="content">' +
+            '<h5>House 2. Boleskine House</h5>' +
+                '<div id="bodyContent">' +
+                    "<p><b>Location: Foyers Scotland, UK </b></p>" +
+                    '<div><img border="1" height="100px" width="100px" style="float:right" SRC="images/house2.jpg"></div>'+
+                    '<p>The building was the home of the Despard family whose daughter Rosina saw the ghost of a veiled' +
+                    "woman on several occasions in the 1880s</p>" +
+                    '<p>Attribution: Boleskine House, <a href="https://en.wikipedia.org/wiki/Boleskine_House">' +
+                    "Wikipedia</a> </p>" +
+                "</div>" +
+            "</div>"},
+        {location: {lat:45.431068 , lng: 12.332400}, message: 'Scarey house 3'},/*House 3 Palazzo Dario Venice*/
+        {location: {lat:40.419971, lng:-3.692151}, message: 'Scarey house 4'}, /*House 4 Palacio de Linares, madrid*/
+        {location: {lat:49.793868 , lng:8.668086}, message: 'Scarey house 5'},/*House 5 Frankenstein castle*/ 
+        {location: {lat:48.833988 , lng:2.332444}, message: 'Scarey house 6'}, /*House 6 catacombs of paris*/
+        {location: {lat:53.028119 , lng:-7.808400}, message: 'Scarey house 7'}, /*House 7 */ 
+        {location: {lat:40.6789893 , lng:-73.4170673}, message: 'Scarey house 8'}, /*House 8 */
+        {location: {lat:29.962072 , lng:-90.061264}, message: 'Scarey house 9'}, /*House 9 */
+        {location: {lat:19.290305 , lng:-99.096538}, message: 'Scarey house 10'}, /*House 10 isla de las muñecas mexico*/
+        {location: {lat:-23.547790 , lng:-46.641106}, message: 'Scarey house 11'},/*House 11 Joelma Building. Sao Paulo*/
+        {location: {lat:4.576359 , lng:-74.296661}, message: 'Scarey house 12'} /*House 12 El Salto Hotel. Tequendama*/
     ];
+    
     var markers = locations.map(function(location, i){
-        return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
+        const infowindow = new google.maps.InfoWindow({
+            content: location.message,
+            
         });
+
+        infowindow.setOptions({maxWidth:300})
+
+        console.log(i);
+        console.log(location);
+        var mark = new google.maps.Marker({
+            position: location.location,
+            label: labels[i % labels.length],
+            icon: {
+                    strokeWeight: 1,
+                    strokeColor:'red',
+                    url:"images/gate.svg",
+                    scaledSize: new google.maps.Size(20, 20), // scaled size
+                    origin: new google.maps.Point(0,0), // origin
+                    anchor: new google.maps.Point(0, 0) // anchor
+            }
+        });
+        mark.addListener("click", () => {
+            infowindow.open(map, mark);
+        });
+        return mark;
     });
 
     var markerCluster = new MarkerClusterer(map, markers,{
