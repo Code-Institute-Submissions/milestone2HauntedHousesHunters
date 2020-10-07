@@ -21,46 +21,43 @@
 
 <!----------Navigation menus-------------------->
     <div class="row">
-        <nav class="navbar navbar-expand-lg col-lg-12" id="navbar">
-	<!-- Logo (placeholder for now) --> 
-	        <div class="logo navbar-brand col-md-4">
-                <a href="index.html" title="Haunted Houses Hunters"></a>
+        <nav class="navbar col-lg-12 navbar-expand-lg" id="navbar">
+            <a class="logo navbar-brand col-md-2 offset-md-2" src="images/logo.png" href="index.html"></a>
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-auto justify-content-center" id="navbarTogglerDemo02">
+                <div class="navbar-nav">
+                    <a class="nav-item m-auto nav-link" href="index.html">Home</a>
+                    <a class="nav-item m-auto nav-link" href="houses.html">Houses</a>
+                    <a class="nav-item m-auto nav-link" href="locations.html">Locations</a>
+                    <a class="nav-item m-auto nav-link active" href="contact.html">Contact</a>
+                </div>
             </div>
-
-            <!-- Toggler Icon on Mobile -->
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button> -->
-            <!-- Navigation Links -->
-                <ul class="navbar-nav d-flex ml-auto justify-content-center">
-                    <li class="nav-item m-auto col-xs-6 col-sm-2">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item m-auto col-xs-6 col-sm-2">
-                        <a class="nav-link" href="houses.html">Houses</a>
-                    </li>
-                    <li class="nav-item m-auto col-xs-6 col-sm-2">
-                        <a class="nav-link" href="locations.html">Locations</a>
-                    </li>
-                    <li class="nav-item m-auto col-xs-6 col-sm-2">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul> 
-            </nav>
-        </div>
-<!----------Navigation on small screens-------->
+        </nav>
+    </div>
 
 
 <!----------Google Map------------------>
-  
-        <div class="row">
-            <div class="col-xs-12 col-md-8">
-                <h1>See the houses in the map</h1>
-                <div id="map">
-                </div>
-            </div>
+        
+    <div class="row  map-page">
+        <div class="col-lg-4 col-md-12 col-xs-12 align-self-start googlemap-left">
+                <h1>Locate the houses</h1>
+                <p>The best way to inmerse yourself into all of these terrifying places stories is by visiting them!</p>
+                <p>Locate your favourite!</p> 
+                <img src="images/castle.jpg" style height="300px" width="300px">
         </div>
+        <div class="col-lg-8 col-md-12 col-xs-12">
+                <div id="map"></div>
+            
+        </div>
+    </div>
+    
+
+        
+            
+            
+        
     
 
 <!----------Section for Infor displayed when click on a house on the map----------------->
