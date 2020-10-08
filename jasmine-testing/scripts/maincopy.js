@@ -1,4 +1,4 @@
-/* ---------------- Houses page --------------- */
+/* ---------------- Houses page --------------- 
     $("#house1_read").click(function() {
         $('#complete1').toggle();
    });
@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 */
 
-/*------------Contact page EmailJS-------------------- */
+/*------------Contact page EmailJS-------------------- 
 function sendMail(contactForm){
     emailjs.send("gmail","template_HauntedHouses",{
         "from_name": contactForm.name.value,
@@ -76,7 +76,7 @@ function sendMail(contactForm){
         return false;
 }
 
-
+*/
 /*-------------------------Locations page GoogleMaps API --------------------------- */
 
 /*-----------Option 1 only one marker with info. (working)-----------
@@ -270,7 +270,7 @@ function initMap(){
       };
     })(marker, i));
 */
-   /* -----------Option 4 several markers but no info ---------*/
+   /* -----------Option 4 several markers but no info --------
    function initMap(){
         var map = new google.maps.Map(document.getElementById("map"),{
             zoom:3,
@@ -307,18 +307,18 @@ function initMap(){
                     "Wikipedia</a> </p>" +
                 "</div>" +
             "</div>"},
-        {location: {lat:45.431068 , lng: 12.332400}, message: 'Scarey house 3'},/*House 3 Palazzo Dario Venice*/
-        {location: {lat:40.419971, lng:-3.692151}, message: 'Scarey house 4'}, /*House 4 Palacio de Linares, madrid*/
-        {location: {lat:48.833988 , lng:2.332444}, message: 'Scarey house 5'}, /*House 5 catacombs of paris*/
-        {location: {lat:53.028119 , lng:-7.808400}, message: 'Scarey house 6'}, /*House 6  Leap Castle. Coolderry*/
-        {location: {lat:40.6789893 , lng:-73.4170673}, message: 'Scarey house 7'}, /*House 7  Amityville House */
-        {location: {lat:29.962072 , lng:-90.061264}, message: 'Scarey house 8'}, /*House 8  LaLaurie Mansion */
-        {location: {lat:19.290305 , lng:-99.096538}, message: 'Scarey house 9'}, /*House 9 isla de las muñecas mexico*/
-        {location: {lat:-23.547790 , lng:-46.641106}, message: 'Scarey house 10'},/*House 10 Joelma Building. Sao Paulo*/
-        {location: {lat:4.576359 , lng:-74.296661}, message: 'Scarey house 11'}, /*House 11 El Salto Hotel. Tequendama*/
-        {location: {lat:43.667025 , lng:-79.377915}, message: 'Scarey house 12'} /*House 12 Keg Mansion. Toronto*/
+        {location: {lat:45.431068 , lng: 12.332400}, message: 'Scarey house 3'},/*House 3 Palazzo Dario Venice
+        {location: {lat:40.419971, lng:-3.692151}, message: 'Scarey house 4'}, /*House 4 Palacio de Linares, madrid
+        {location: {lat:48.833988 , lng:2.332444}, message: 'Scarey house 5'}, /*House 5 catacombs of paris
+        {location: {lat:53.028119 , lng:-7.808400}, message: 'Scarey house 6'}, /*House 6  Leap Castle. Coolderry
+        {location: {lat:40.6789893 , lng:-73.4170673}, message: 'Scarey house 7'}, /*House 7  Amityville House 
+        {location: {lat:29.962072 , lng:-90.061264}, message: 'Scarey house 8'}, /*House 8  LaLaurie Mansion 
+        {location: {lat:19.290305 , lng:-99.096538}, message: 'Scarey house 9'}, /*House 9 isla de las muñecas mexico
+        {location: {lat:-23.547790 , lng:-46.641106}, message: 'Scarey house 10'},/*House 10 Joelma Building. Sao Paulo
+        {location: {lat:4.576359 , lng:-74.296661}, message: 'Scarey house 11'}, /*House 11 El Salto Hotel. Tequendama
+        {location: {lat:43.667025 , lng:-79.377915}, message: 'Scarey house 12'} /*House 12 Keg Mansion. Toronto
     ];
-    
+     
     var markers = locations.map(function(location, i){
         const infowindow = new google.maps.InfoWindow({
             content: location.message,
@@ -351,6 +351,7 @@ function initMap(){
         imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
 }
+
     /*--------------------------------------------*/
 
     
