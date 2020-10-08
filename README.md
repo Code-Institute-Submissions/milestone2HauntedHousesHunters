@@ -90,9 +90,10 @@ discovered during your testing, even if you haven't addressed them yet.
 
 ----
 ## Deployment
-steps to do that in the github settings. 
-Basically explain, how you got the page up and running.
-https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages 
+
+Deployed using GitHub Pages using default publishing source, main branch, root folder.
+This repository can be cloned to create a local copy
+
 deployment includes writing up how to run your code locally. So explain how to pull your code from your github repository 
 so someone could clone your code to work on on their own machine. 
 Here is how to do that: https://help.github.com/en/articles/cloning-a-repository Include these steps in your readme.md too 

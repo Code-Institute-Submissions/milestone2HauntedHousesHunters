@@ -15,7 +15,7 @@ body{
 
 @font-face {
 font-family: "Jessen-Cicero";
-src: url("/Jessen-Cicero12.otf");
+src: url("Jessen-Cicero12.otf");
 font-weight: normal;
 font-style: normal;
 }
@@ -30,7 +30,7 @@ nav{
 }
 
 .logo{
-    background: url("/images/logo.png") center no-repeat; 
+    background: url("milestone2HauntedHousesHunters/images/logo.png") center no-repeat; 
     height: 80px;
     background-size: contain;
 }
@@ -71,7 +71,7 @@ nav{
 
 /*-----------------------Header Home page-----------------------*/
 .header{
-    background-image: url("/images/castleinterior.png");
+    background-image: url("images/castleinterior.png");
     background-size: 100%;
     background-repeat: no-repeat;
     border: 1px solid #8d0134; 
