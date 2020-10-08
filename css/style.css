@@ -137,10 +137,6 @@ nav{
     background-color: #231f20;
     color: #fbf8f2;
     border:solid 1px #8d0134;
-}
-
-.btn-dark a{
-    color: #fbf8f2;
     font-family: 'Jessen-Cicero';
     font-size: 24px;
     font-weight: lighter;
@@ -148,7 +144,8 @@ nav{
     letter-spacing: 2px;
 }
 
-.btn-dark a:hover{
+
+.btn-dark:hover{
     color: #c0b43c;
     text-decoration: none;
 }
@@ -164,7 +161,7 @@ nav{
 /*-----------------------Slider Home page-------------------*/
 #wrapper {
 	margin: 0 auto;
-	width: 600px;
+	width: 100%;
     font-family: monospace;
   }
 

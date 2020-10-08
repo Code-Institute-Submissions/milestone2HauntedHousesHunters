@@ -92,12 +92,9 @@ discovered during your testing, even if you haven't addressed them yet.
 ## Deployment
 
 Deployed using GitHub Pages using default publishing source, main branch, root folder.
-This repository can be cloned to create a local copy
-
-deployment includes writing up how to run your code locally. So explain how to pull your code from your github repository 
-so someone could clone your code to work on on their own machine. 
-Here is how to do that: https://help.github.com/en/articles/cloning-a-repository Include these steps in your readme.md too 
-and that's the deployment section of your readme sorted
+This repository can be cloned to pull down a full copy of all the repository to create 
+a local copy using command line.        
+Here is how to do that: https://help.github.com/en/articles/cloning-a-repository 
 
 ----
 ## Technologies used
