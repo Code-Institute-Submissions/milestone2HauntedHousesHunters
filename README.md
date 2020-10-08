@@ -66,6 +66,7 @@ regarding positioning, styling with borders and resizing it in a more responsibl
 
 ## Testing
 This site was tested across multiple device screen sizes to ensure compatibility and responsiveness.
+Using Chrome inspect tool.
 
  go over all of your user stories from the UX section and ensure that they all work as intended, 
 with the project providing an easy and straightforward way for the users to achieve their goals.
@@ -86,7 +87,11 @@ Try to submit the form with all inputs valid and verify that a success message a
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
 Known problems      
-discovered during your testing, even if you haven't addressed them yet.
+
+The header image on index.html not fully responsive between 300 and 450px width.        
+The html validator throws 3 errors unaddressed:     
+* On index.html Attribute src not allowed on element a      
+* The element button must not appear as a descendant of the a
 
 ----
 ## Deployment
