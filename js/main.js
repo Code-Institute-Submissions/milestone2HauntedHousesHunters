@@ -94,7 +94,7 @@ function initMap(){
             '<h5>House 1. Garden Reach</h5>' +
                 '<div id="bodyContent">' +
                     "<p><b>Location: Cheltenham, UK </b></p>" +
-                    '<div><img border="1" height="100px" width="100px" style="float:right" SRC="images/house1.png"></div>'+
+                    '<div><img border="1" height="100px" width="100px" style="float:right" SRC="images/house1.jpg"></div>'+
                     '<p>The building was the home of the Despard family whose daughter Rosina saw the ghost of a veiled' +
                     "woman on several occasions in the 1880s</p>" +
                     '<p>Attribution: Garden Reach, <a href="https://en.wikipedia.org/wiki/The_Cheltenham_Ghost">' +
