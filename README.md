@@ -59,6 +59,8 @@ For some/all of your features, you may choose to reference the specific project 
 * Adding more UI side effects with JQuery, like in the Slideshow that is currently made only with HTML and CSS with a very fixed paramethers creating some limitations
 regarding positioning, styling with borders and resizing it in a more responsible and easier way.
 
+* Adding some confirmation message after the formulary has been submitted on contact.html
+
 
 </dl>
 
@@ -68,14 +70,16 @@ regarding positioning, styling with borders and resizing it in a more responsibl
 This site was tested across multiple device screen sizes to ensure compatibility and responsiveness.
 Using Chrome inspect tool.
 
- go over all of your user stories from the UX section and ensure that they all work as intended, 
-with the project providing an easy and straightforward way for the users to achieve their goals.
+The following testing tools have been used:
 
 Validator for html code     
 [https://validator.w3.org/]
 
 Validator for css code      
 [https://jigsaw.w3.org/css-validator/]
+
+go over all of your user stories from the UX section and ensure that they all work as intended, 
+with the project providing an easy and straightforward way for the users to achieve their goals.
 
 A particularly useful form for describing your testing process is via scenarios, such as:
 
@@ -89,9 +93,9 @@ In addition, you should mention in this section how your project looks and works
 Known problems      
 
 The header image on index.html not fully responsive between 300 and 450px width.        
-The html validator throws 3 errors unaddressed:     
+The html validator throws 2 errors unaddressed:     
 * On index.html Attribute src not allowed on element a      
-* The element button must not appear as a descendant of the a
+* The element button must not appear as a descendant of the  element a
 
 ----
 ## Deployment
