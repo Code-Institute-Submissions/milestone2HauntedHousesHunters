@@ -1,5 +1,9 @@
 
 /* ---------------- Houses page --------------- */
+
+/*This is an event listener using jquery created so when the user clicks on "readmore" (on each card from the houses.html page) which has the id house1_read
+the function will toggle the paragraph with the id complete1 that is contained within that id, showing it or hiding it.
+As there are 12 cards each one having its own readmore link  this function has been replicated for each of those*/
     $("#house1_read").click(function() {
         $('#complete1').toggle();
    });
@@ -50,6 +54,8 @@
 
 
 /*------------Contact page EmailJS-------------------- */
+/* Using EmailJS servie Software Development Kit as specified in their site. 
+The function is using our mail service id and our template id both specified in our emailJS account in their site */
 function sendMail(contactForm){
     emailjs.send("gmail","template_HauntedHouses",{
         "from_name": contactForm.name.value,
@@ -61,25 +67,27 @@ function sendMail(contactForm){
             console.log("SUCCESS", response);
         },
         function(error){
-            console.log("FAILED", error);
+            console.log("Failed, please try again", error);
         });
+
         return false;
-}
+};
 
 
 /*-------------------------Locations page GoogleMaps API --------------------------- */
 
-   function initMap(){
-        var map = new google.maps.Map(document.getElementById("map"),{
-            zoom:3,
-            center:{
-                lat:31.704726 , 
-                lng: -39.471655
+// This function and map object comes from Google Maps API spec and we use the method to retrieve the div class "map" which is where the map wil be showing.
+function initMap(){
+    var map = new google.maps.Map(document.getElementById("map"),{ // these are the initial paramethers of the map that will show
+        zoom:3,
+        center:{
+            lat:31.704726 , 
+            lng: -39.471655
             }
-        }); 
-   
-   var labels = "123456789JKL";
+    }); 
 
+   /* we have the locations array object here that has been extended to contain each location object and we have set the initial values
+   for the lattitude and longitude coords for each of the 12 houses location in the map*/
     var locations = [
         {location: {lat:51.903023 , lng: -2.061397}, message: 
             '<div id="content">' +
@@ -92,7 +100,8 @@ function sendMail(contactForm){
                     '<p>Attribution: Garden Reach, <a href="https://en.wikipedia.org/wiki/The_Cheltenham_Ghost">' +
                     "Wikipedia</a> </p>" +
                 "</div>" +
-            "</div>"},
+            "</div>"}, /*This html code on each message property inside each location object, allows us to add content and format the information window
+            that will be showing on each marker on the map */
          
         {location: {lat:57.266329 , lng: -4.47479}, message: 
         '<div id="content">' +
@@ -228,39 +237,42 @@ function sendMail(contactForm){
             "</div>"} 
     ];
     
+    /*The map is a javascript built in javascript method and returns an array with the results of looping through each location item in our locations array. 
+    We are passing each location object (the current value of where we are in the array as we're looping through) and its properties (i which is the index number of 
+    where we currently are in the array on each lattitude, longittude and message) as an argument into the markers function, so we iterate through the locations array, 
+    and we are adding the information window to each marker on the actual map.*/
     var markers = locations.map(function(location, i){
         const infowindow = new google.maps.InfoWindow({
             content: location.message,
-            
         });
-
+        /* Modifying the max width of the information window so it does not show too big on each marker */
         infowindow.setOptions({maxWidth:300})
-
-        console.log(i);
-        console.log(location);
+        /*We define the mark object to be returned by the markers function */
         var mark = new google.maps.Marker({
-            position: location.location,
-            label:"",
+            position: location.location, //this shows the current location objects and tags it
+            label:"", // I've removed the default label that usually shows on each marker (A,B,C,D etc) as I've changed the default marker icon I don't what that label to show on top of the icon image
             icon: {
                     strokeWeight: 1,
                     url:"images/gate.svg",
-                    scaledSize: new google.maps.Size(20, 20), // scaled size
-                    origin: new google.maps.Point(0,0), // origin
-                    anchor: new google.maps.Point(0, 0) // anchor
-            }
+                    scaledSize: new google.maps.Size(20, 20), // scaled size of the icon image
+                    origin: new google.maps.Point(0,0), 
+                    anchor: new google.maps.Point(0, 0) 
+            } // Here I am replacing the default drop shape icon for each marker with an svg image of a gate
         });
+        //This event listener will trigger when the user clicks on each marker on the map
         mark.addListener("click", () => {
             infowindow.open(map, mark);
         });
         return mark;
     });
+
+    //Here I am allowing the map canvas to be resized in the page
     google.maps.event.addDomListener(window, 'load', initMap);
     google.maps.event.addDomListener(window, "resize", function() {
-        
-    google.maps.event.trigger(map, "resize");
-    
+        google.maps.event.trigger(map, "resize");
     });
 
+    //This is taken from the google API tutorial to create both the markers image for our map, and create them in a cluster if they're close together using the clusterer library.
     var markerCluster = new MarkerClusterer(map, markers,{
         imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
